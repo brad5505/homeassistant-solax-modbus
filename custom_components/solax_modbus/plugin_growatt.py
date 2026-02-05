@@ -2330,6 +2330,22 @@ SENSOR_TYPES: list[GrowattModbusSensorEntityDescription] = [
         icon="mdi:information",
     ),
     GrowattModbusSensorEntityDescription(
+        name="Rated battery charging",
+        key="rated_battery_charging",
+        native_unit_of_measurement=UnitOfPower.WATT,
+        device_class=SensorDeviceClass.POWER,
+        state_class=SensorStateClass.MEASUREMENT,
+        register=30026,
+        register_type=REG_HOLDING,
+        unit=REGISTER_U32,
+        scale=0.1,
+        rounding=1,
+        allowedtypes=GEN3 | GEN4,
+        entity_category=EntityCategory.DIAGNOSTIC,
+        entity_registry_enabled_default=True,
+        icon="mdi:battery-sync",
+    ),
+    GrowattModbusSensorEntityDescription(
         key="inverter_switch",
         register=0,
         scale={

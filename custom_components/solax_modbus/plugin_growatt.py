@@ -1136,6 +1136,19 @@ SELECT_TYPES = [
         icon="mdi:dip-switch",
     ),
     GrowattModbusSelectEntityDescription(
+        name="VPP Allow AC charging",
+        key="vpp_allow_ac_charging",
+        register=30410,
+        option_dict={
+            0: "Disabled",
+            1: "Enabled",
+        },
+        allowedtypes=GEN3 | GEN4,
+        entity_category=EntityCategory.CONFIG,
+        entity_registry_enabled_default=True,
+        icon="mdi:dip-switch",
+    ),
+    GrowattModbusSelectEntityDescription(
         name="Inverter Switch",
         key="inverter_switch",
         register=0,
@@ -2319,6 +2332,16 @@ SENSOR_TYPES: list[GrowattModbusSensorEntityDescription] = [
         register_data_type=REGISTER_S16,
         allowedtypes=GEN3 | GEN4,
         scale=1,
+        internal=True,
+    ),    
+    GrowattModbusSensorEntityDescription(
+        key="vpp_allow_ac_charging",
+        register=30410,
+        scale={
+            0: "Disabled",
+            1: "Enabled",
+        },
+        allowedtypes=GEN3 | GEN4,
         internal=True,
     ),
     GrowattModbusSensorEntityDescription(

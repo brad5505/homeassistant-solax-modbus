@@ -26,8 +26,6 @@ from custom_components.solax_modbus.const import (  # type: ignore[attr-defined]
     DEFAULT_READ_EPS,
     REG_HOLDING,
     REG_INPUT,
-    REGISTER_U8L,
-    REGISTER_U8H,
     REGISTER_S16,
     REGISTER_S32,
     REGISTER_STR,
@@ -1141,7 +1139,6 @@ SELECT_TYPES = [
         name="VPP Allow AC charging",
         key="vpp_allow_ac_charging",
         register=30410,
-        register_data_type=REGISTER_U8L,
         option_dict={
             0: "Disabled",
             1: "Enabled",

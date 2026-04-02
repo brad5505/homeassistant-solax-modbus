@@ -2335,6 +2335,16 @@ SENSOR_TYPES: list[GrowattModbusSensorEntityDescription] = [
         internal=True,
     ),
     GrowattModbusSensorEntityDescription(
+        key="vpp_allow_ac_charging",
+        register=30410,
+        scale={
+            0: "Disabled",
+            1: "Enabled",
+        },
+        allowedtypes=GEN3 | GEN4,
+        internal=True,
+    ),
+    GrowattModbusSensorEntityDescription(
         name="Battery SOH",
         key="battery_soh",
         native_unit_of_measurement=PERCENTAGE,

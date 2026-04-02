@@ -2333,7 +2333,7 @@ SENSOR_TYPES: list[GrowattModbusSensorEntityDescription] = [
         allowedtypes=GEN3 | GEN4,
         scale=1,
         internal=True,
-    ),    
+    ),
     GrowattModbusSensorEntityDescription(
         key="vpp_allow_ac_charging",
         register=30410,

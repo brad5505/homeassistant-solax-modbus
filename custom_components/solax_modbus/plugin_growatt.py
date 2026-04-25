@@ -811,7 +811,7 @@ NUMBER_TYPES = [
         native_step=5,
         native_unit_of_measurement=UnitOfTime.MINUTES,
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         entity_category=EntityCategory.CONFIG,
         entity_registry_enabled_default=True,
         icon="mdi:battery-clock",
@@ -826,7 +826,7 @@ NUMBER_TYPES = [
         native_step=5,
         native_unit_of_measurement=PERCENTAGE,
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         entity_category=EntityCategory.CONFIG,
         entity_registry_enabled_default=True,
         icon="mdi:battery-sync",
@@ -1121,7 +1121,7 @@ SELECT_TYPES = [
             1: "Enabled",
         },
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         entity_category=EntityCategory.CONFIG,
         entity_registry_enabled_default=True,
         icon="mdi:dip-switch",
@@ -1135,7 +1135,7 @@ SELECT_TYPES = [
             1: "Enabled",
         },
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         entity_category=EntityCategory.CONFIG,
         entity_registry_enabled_default=True,
         icon="mdi:dip-switch",
@@ -1150,7 +1150,7 @@ SELECT_TYPES = [
             1: "Enabled",
         },
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         entity_category=EntityCategory.CONFIG,
         entity_registry_enabled_default=True,
         icon="mdi:dip-switch",
@@ -2314,7 +2314,7 @@ SENSOR_TYPES: list[GrowattModbusSensorEntityDescription] = [
             1: "Enabled",
         },
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         internal=True,
     ),
     GrowattModbusSensorEntityDescription(
@@ -2325,14 +2325,14 @@ SENSOR_TYPES: list[GrowattModbusSensorEntityDescription] = [
             1: "Enabled",
         },
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         internal=True,
     ),
     GrowattModbusSensorEntityDescription(
         key="vpp_time",
         register=30408,
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         scale=1,
         internal=True,
     ),
@@ -2341,7 +2341,7 @@ SENSOR_TYPES: list[GrowattModbusSensorEntityDescription] = [
         register=30409,
         register_data_type=REGISTER_S16,
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         scale=1,
         internal=True,
     ),
@@ -2354,7 +2354,7 @@ SENSOR_TYPES: list[GrowattModbusSensorEntityDescription] = [
             1: "Enabled",
         },
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         internal=True,
     ),
     GrowattModbusSensorEntityDescription(
@@ -2365,7 +2365,7 @@ SENSOR_TYPES: list[GrowattModbusSensorEntityDescription] = [
         register=31218,
         register_type=REG_INPUT,
         allowedtypes=GEN3 | GEN4 | HYBRID,
-        ignore_readerror=True
+        ignore_readerror=True,
         entity_category=EntityCategory.DIAGNOSTIC,
         entity_registry_enabled_default=True,
         icon="mdi:information",
